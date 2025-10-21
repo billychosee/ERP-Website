@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -13,14 +15,14 @@ const Header = () => {
           ZERP365
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Home</Link>
-          <Link href="/modules" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Modules</Link>
-          <Link href="/integrations" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Integrations</Link>
-          <Link href="/industries" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Industries</Link>
-          <Link href="/pricing" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Pricing</Link>
-          <Link href="/about" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">About</Link>
-          <Link href="/resources" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Resources</Link>
-          <Link href="/contact" className="text-[#8DC440] hover:text-[#64AC6F] transition-colors">Contact</Link>
+          <Link href="/" className={`${pathname === '/' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Home</Link>
+          <Link href="/modules" className={`${pathname === '/modules' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Modules</Link>
+          <Link href="/integrations" className={`${pathname === '/integrations' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Integrations</Link>
+          <Link href="/industries" className={`${pathname === '/industries' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Industries</Link>
+          <Link href="/pricing" className={`${pathname === '/pricing' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Pricing</Link>
+          <Link href="/about" className={`${pathname === '/about' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>About</Link>
+          <Link href="/resources" className={`${pathname === '/resources' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Resources</Link>
+          <Link href="/contact" className={`${pathname === '/contact' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Contact</Link>
         </nav>
         <div className="hidden md:flex space-x-4">
           <Link href="/demo" className="bg-[#8DC440] text-white px-4 py-2 rounded-full hover:bg-[#64AC6F] transition-colors">
@@ -42,14 +44,14 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t">
           <nav className="container mx-auto px-4 py-4 space-y-2">
-            <Link href="/" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Home</Link>
-            <Link href="/modules" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Modules</Link>
-            <Link href="/integrations" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Integrations</Link>
-            <Link href="/industries" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Industries</Link>
-            <Link href="/pricing" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Pricing</Link>
-            <Link href="/about" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">About</Link>
-            <Link href="/resources" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Resources</Link>
-            <Link href="/contact" className="block text-[#8DC440] hover:text-[#64AC6F] transition-colors">Contact</Link>
+            <Link href="/" className={`block ${pathname === '/' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Home</Link>
+            <Link href="/modules" className={`block ${pathname === '/modules' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Modules</Link>
+            <Link href="/integrations" className={`block ${pathname === '/integrations' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Integrations</Link>
+            <Link href="/industries" className={`block ${pathname === '/industries' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Industries</Link>
+            <Link href="/pricing" className={`block ${pathname === '/pricing' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Pricing</Link>
+            <Link href="/about" className={`block ${pathname === '/about' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>About</Link>
+            <Link href="/resources" className={`block ${pathname === '/resources' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Resources</Link>
+            <Link href="/contact" className={`block ${pathname === '/contact' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Contact</Link>
             <Link href="/demo" className="block bg-[#8DC440] text-white px-4 py-2 rounded-full hover:bg-[#64AC6F] transition-colors text-center">Book a Demo</Link>
             <Link href="/pricing" className="block border border-[#8DC440] text-[#8DC440] px-4 py-2 rounded-full hover:bg-[#8DC440] hover:text-white transition-colors text-center">Start Free Trial</Link>
           </nav>

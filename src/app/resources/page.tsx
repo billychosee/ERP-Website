@@ -98,7 +98,7 @@ export default function Resources() {
               </p>
               <Link
                 href="/demo"
-                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
+                className="bg-[#8DC440] text-white px-8 py-3 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
               >
                 Schedule Discovery Call
               </Link>
@@ -142,7 +142,7 @@ export default function Resources() {
           <div className="text-center mt-12">
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+              className="bg-[#8DC440] text-white px-8 py-3 rounded-full hover:bg-[#64AC6F] transition-colors text-lg font-semibold"
             >
               Explore All Resources →
             </Link>

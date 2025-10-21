@@ -59,7 +59,7 @@ export default function Pricing() {
               </p>
               <Link
                 href="/demo"
-                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
+                className="bg-[#8DC440] text-white px-8 py-3 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
               >
                 Schedule Discovery Call
               </Link>
@@ -74,7 +74,7 @@ export default function Pricing() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Free Plan */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md border-2 border-gray-200">
+            <div className="bg-gray-50 p-8 rounded-xl shadow-md border-2 border-gray-200">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Getting Started
@@ -97,7 +97,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Basic accounting
+                    <span className="text-black">Basic accounting</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -111,7 +111,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Sales management
+                    <span className="text-black">Sales management</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -125,7 +125,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Basic inventory
+                    <span className="text-black">Basic inventory</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -139,7 +139,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    1 user
+                    <span className="text-black">1 user</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -153,12 +153,12 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Email support
+                    <span className="text-black">Email support</span>
                   </li>
                 </ul>
                 <Link
                   href="/pricing"
-                  className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors w-full block text-center"
+                  className="bg-[#8DC440] text-white px-6 py-3 rounded-full hover:bg-[#64AC6F] transition-colors w-full block text-center"
                 >
                   Get Started Free
                 </Link>
@@ -166,9 +166,9 @@ export default function Pricing() {
             </div>
 
             {/* Starter Plan */}
-            <div className="bg-blue-50 p-8 rounded-lg shadow-md border-2 border-blue-300 relative">
+            <div className="bg-blue-50 p-8 rounded-xl shadow-md border-2 border-blue-300 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                <span className="bg-[#8DC440] text-white px-4 py-1 rounded-full text-sm font-semibold">
                   Most Popular
                 </span>
               </div>
@@ -194,7 +194,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    All core modules
+                    <span className="text-black">All core modules</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -208,7 +208,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Basic integrations
+                    <span className="text-black">Basic integrations</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -222,7 +222,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Up to 10 users
+                    <span className="text-black">Up to 10 users</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -236,7 +236,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Phone & email support
+                    <span className="text-black">Phone & email support</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -250,7 +250,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Basic reporting
+                    <span className="text-black">Basic reporting</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -264,12 +264,12 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Mobile app access
+                    <span className="text-black">Mobile app access</span>
                   </li>
                 </ul>
                 <Link
                   href="/demo"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors w-full block text-center"
+                  className="bg-[#8DC440] text-white px-6 py-3 rounded-full hover:bg-[#64AC6F] transition-colors w-full block text-center"
                 >
                   Start Free Trial
                 </Link>
@@ -277,7 +277,7 @@ export default function Pricing() {
             </div>
 
             {/* Enterprise Plan */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md border-2 border-gray-200">
+            <div className="bg-gray-50 p-8 rounded-xl shadow-md border-2 border-gray-200">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Enterprise
@@ -302,7 +302,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Full suite + advanced customization
+                    <span className="text-black">Full suite + advanced customization</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -316,7 +316,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    All integrations
+                    <span className="text-black">All integrations</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -330,7 +330,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Unlimited users
+                    <span className="text-black">Unlimited users</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -344,7 +344,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    24/7 priority support
+                    <span className="text-black">24/7 priority support</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -358,7 +358,7 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Advanced analytics
+                    <span className="text-black">Advanced analytics</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -372,12 +372,12 @@ export default function Pricing() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Custom development
+                    <span className="text-black">Custom development</span>
                   </li>
                 </ul>
                 <Link
                   href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors w-full block text-center"
+                  className="bg-[#8DC440] text-white px-6 py-3 rounded-full hover:bg-[#64AC6F] transition-colors w-full block text-center"
                 >
                   Request a Quote
                 </Link>
@@ -389,13 +389,13 @@ export default function Pricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/demo"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+                className="bg-[#8DC440] text-white px-8 py-3 rounded-full hover:bg-[#64AC6F] transition-colors text-lg font-semibold"
               >
                 Book a Demo
               </Link>
               <Link
                 href="/pricing"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-lg font-semibold"
+                className="border-2 border-[#8DC440] text-[#8DC440] px-8 py-3 rounded-full hover:bg-[#8DC440] hover:text-white transition-colors text-lg font-semibold"
               >
                 Get Started Now
               </Link>
