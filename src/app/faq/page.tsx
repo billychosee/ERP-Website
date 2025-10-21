@@ -87,13 +87,15 @@ export default function FAQ() {
             {/* Left Section - About FAQ */}
             <div className="animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-[#8DC440]">Frequently</span> Asked Questions
+                <span className="text-[#8DC440]">Frequently</span> Asked
+                Questions
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
                 Find answers to common questions about ZERP365.
               </p>
               <p className="text-lg mb-8 max-w-2xl">
-                Can't find what you're looking for? Our support team is here to help.
+                Can&apos;t find what you&apos;re looking for? Our support team
+                is here to help.
               </p>
             </div>
 
@@ -150,17 +152,24 @@ export default function FAQ() {
                     onClick={() => toggleFAQ(index)}
                   >
                     <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-bold text-gray-900 pr-4 group-hover:text-[#8DC440] transition-colors duration-300">{faq.question}</h3>
+                      <h3 className="text-lg font-bold text-gray-900 pr-4 group-hover:text-[#8DC440] transition-colors duration-300">
+                        {faq.question}
+                      </h3>
                       <div className="flex-shrink-0 w-8 h-8 bg-[#8DC440]/10 rounded-full flex items-center justify-center group-hover:bg-[#8DC440]/20 transition-colors duration-300">
                         <svg
                           className={`w-5 h-5 text-[#8DC440] transform transition-transform duration-300 ${
-                            openIndex === index ? 'rotate-180' : ''
+                            openIndex === index ? "rotate-180" : ""
                           }`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -177,7 +186,9 @@ export default function FAQ() {
                 {openIndex === index && (
                   <div className="px-8 pb-8 animate-fade-in-up">
                     <div className="border-t border-gray-100 pt-6">
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
                     </div>
                   </div>
                 )}
@@ -187,11 +198,17 @@ export default function FAQ() {
 
           <div className="text-center mt-16">
             <div className="bg-gray-50 p-12 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Didn't find your answer?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Didn&apos;t find your answer?
+              </h3>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Our support team is here to help. Get in touch with us for personalized assistance.
+                Our support team is here to help. Get in touch with us for
+                personalized assistance.
               </p>
-              <Link href="/contact" className="bg-[#8DC440] text-white px-10 py-4 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block">
+              <Link
+                href="/contact"
+                className="bg-[#8DC440] text-white px-10 py-4 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
+              >
                 Contact Support →
               </Link>
             </div>
