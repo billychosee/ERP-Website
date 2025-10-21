@@ -132,14 +132,64 @@ export default function Industries() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Built for Your Industry
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Retail, Manufacturing, Services, Construction, Finance, Agriculture, Education, NGOs — ZERP365 adapts to your workflows, not the other way around.
-          </p>
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url(/hero_built_for_your_industry_black_team.png)",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#8DC440]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div
+            className="absolute top-1/2 -left-10 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-0 right-1/4 w-52 h-52 bg-purple-500/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
+
+        <div className="relative container mx-auto px-4 text-white z-10">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Section - About Industries */}
+            <div className="animate-fade-in-up">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="text-[#8DC440]">Built</span> for Your Industry
+              </h1>
+              <p className="text-xl mb-4 max-w-3xl">
+                Retail, Manufacturing, Services, Construction, Finance,
+                Agriculture, Education, NGOs — ZERP365 adapts to your workflows,
+                not the other way around.
+              </p>
+            </div>
+
+            {/* Right Section - Need Our Services */}
+            <div
+              className="bg-white/10 backdrop-blur-md rounded-xl p-8 text-center animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Industry-Specific Solutions?
+              </h2>
+              <p className="text-lg mb-8">
+                Let&apos;s discuss how ZERP365 can be tailored to your
+                industry&apos;s unique requirements.
+              </p>
+              <Link
+                href="/demo"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
+              >
+                Schedule Discovery Call
+              </Link>
+              <p className="mt-4 text-sm">Or explore our industries below</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -148,13 +198,20 @@ export default function Industries() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{industry.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {industry.name}
+                </h3>
                 <p className="text-gray-600 mb-4">{industry.description}</p>
                 <div className="space-y-1">
                   {industry.subIndustries.slice(0, 3).map((sub, subIndex) => (
-                    <div key={subIndex} className="text-sm text-gray-500">• {sub}</div>
+                    <div key={subIndex} className="text-sm text-gray-500">
+                      • {sub}
+                    </div>
                   ))}
                   {industry.subIndustries.length > 3 && (
                     <div className="text-sm text-blue-600 font-medium">
@@ -167,7 +224,10 @@ export default function Industries() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/demo" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold">
+            <Link
+              href="/demo"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+            >
               See All Industries →
             </Link>
           </div>

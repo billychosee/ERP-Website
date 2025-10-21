@@ -128,28 +128,28 @@ export default function Home() {
         {/* Content Overlay */}
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <div className="max-w-5xl mx-auto">
-            <p className="text-[#8DC440] text-base font-medium uppercase tracking-widest mb-3">
+            <p className="text-[#8DC440] text-base font-medium uppercase tracking-widest mb-3 animate-fade-in-up">
               The Unified Business Platform
             </p>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight animate-slide-in-left">
               Run Your <span className="text-[#64AC6F]">Entire Business</span>{" "}
               on One Platform
             </h1>
-            <p className="text-lg text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8 max-w-4xl mx-auto animate-slide-in-right">
               ZERP365 is a single, powerful platform built specifically to
               handle African compliance (ZIMRA, fiscalization, multi-currency),
               uniting Finance, Operations, HR, and CRM.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
               <Link
                 href="/demo"
-                className="bg-[#64AC6F] text-white px-8 py-3 rounded-full hover:bg-[#8DC440] transition-colors text-base font-semibold shadow-xl hover:shadow-[#8DC440]"
+                className="bg-[#64AC6F] text-white px-8 py-3 rounded-full hover:bg-[#8DC440] transition-colors text-base font-semibold shadow-xl hover:shadow-[#8DC440] transform hover:scale-105"
               >
                 Get a Personalized Demo
               </Link>
               <Link
                 href="/pricing"
-                className="text-white border-2 border-gray-500 px-8 py-3 rounded-full hover:bg-gray-700 transition-colors text-base font-semibold"
+                className="text-white border-2 border-gray-500 px-8 py-3 rounded-full hover:bg-gray-700 transition-colors text-base font-semibold transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
@@ -175,14 +175,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {erpModules.map((module, index) => (
-              <ModuleCard
-                key={index}
-                title={module.title}
-                description={module.description}
-                icon={module.icon}
-                link={module.link}
-                color={module.color}
-              />
+              <div key={index} className="animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
+                <ModuleCard
+                  title={module.title}
+                  description={module.description}
+                  icon={module.icon}
+                  link={module.link}
+                  color={module.color}
+                />
+              </div>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -241,15 +242,15 @@ const erpStats = [
 
             {/* Stats Row (Similar to UI Image stats bar) */}
             <div className="grid grid-cols-3 gap-6 py-4 border-t border-b border-gray-700">
-              {erpStats.map((stat, index) => (
-                <div key={index} className="text-left">
-                  <p className={`text-4xl font-bold ${stat.color}`}>
-                    {stat.count}
-                  </p>
-                  <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+               {erpStats.map((stat, index) => (
+                 <div key={index} className="text-left animate-fade-in-up" style={{animationDelay: `${index * 0.3}s`}}>
+                   <p className={`text-4xl font-bold ${stat.color}`}>
+                     {stat.count}
+                   </p>
+                   <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
+                 </div>
+               ))}
+             </div>
           </div>
         </div>
       </section>
@@ -364,11 +365,12 @@ const erpStats = [
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-[#8DC440] transform -translate-y-1/2 z-0"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-              {implementationSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="relative z-10 p-8 bg-white rounded-xl shadow-xl transition transform duration-300 hover:scale-[1.03] flex flex-col items-center text-center"
-                >
+               {implementationSteps.map((step, index) => (
+                 <div
+                   key={index}
+                   className="relative z-10 p-8 bg-white rounded-xl shadow-xl transition transform duration-300 hover:scale-[1.03] flex flex-col items-center text-center animate-fade-in-up"
+                   style={{animationDelay: `${index * 0.4}s`}}
+                 >
                   {/* Icon Circle - Using step number instead of icon */}
                   <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-br from-[#8DC440] to-[#64AC6F] text-white text-3xl font-bold mb-4 border-4 border-white shadow-inner">
                     {step.step}
@@ -455,3 +457,4 @@ const erpStats = [
     </div>
   );
 }
+ 
