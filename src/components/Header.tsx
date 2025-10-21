@@ -1,62 +1,153 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { useState, useRef } from "react";
+import { usePathname } from "next/navigation";
+
+// Define the primary color as a constant for easy maintenance
+const PRIMARY_COLOR = "#8DC440"; // Your vibrant green
+const HOVER_COLOR = "#679F30"; // A slightly darker green for hover
+
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Modules", href: "/modules" },
+  { name: "Integrations", href: "/integrations" },
+  { name: "Industries", href: "/industries" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Resources", href: "/resources" },
+  { name: "Affiliate", href: "/affiliate" },
+  { name: "Contact", href: "/contact" },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  // FIX 1: Explicitly define the ref type as HTMLDivElement
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const closeMenu = () => setIsOpen(false);
+
+  // FIX 2: Explicitly type the parameters (href: string, isMobile: boolean)
+  const getNavLinkClasses = (href: string, isMobile: boolean = false) => {
+    const baseClasses = isMobile
+      ? "block px-3 py-2 text-base"
+      : "text-sm px-3 py-2";
+    const activeClasses = `text-[${PRIMARY_COLOR}] font-bold`;
+    const inactiveClasses = `text-gray-700 font-medium hover:text-[${HOVER_COLOR}]`;
+
+    return `${baseClasses} ${
+      pathname === href ? activeClasses : inactiveClasses
+    } transition-all duration-300 ease-in-out`;
+  };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-[#8DC440]">
+    <header className="bg-white shadow-lg/5 sticky top-0 z-50 border-b border-gray-100/50">
+      <div className="container mx-auto px-6 lg:px-8 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`text-2xl font-extrabold tracking-tight text-[${PRIMARY_COLOR}]`}
+          onClick={closeMenu}
+        >
           ZERP365
         </Link>
-        <nav className="hidden md:flex space-x-6">
-          <Link href="/" className={`${pathname === '/' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Home</Link>
-          <Link href="/modules" className={`${pathname === '/modules' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Modules</Link>
-          <Link href="/integrations" className={`${pathname === '/integrations' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Integrations</Link>
-          <Link href="/industries" className={`${pathname === '/industries' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Industries</Link>
-          <Link href="/pricing" className={`${pathname === '/pricing' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Pricing</Link>
-          <Link href="/about" className={`${pathname === '/about' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>About</Link>
-          <Link href="/resources" className={`${pathname === '/resources' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Resources</Link>
-          <Link href="/contact" className={`${pathname === '/contact' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Contact</Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-2">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={getNavLinkClasses(item.href)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
-        <div className="hidden md:flex space-x-4">
-          <Link href="/demo" className="bg-[#8DC440] text-white px-4 py-2 rounded-full hover:bg-[#64AC6F] transition-colors">
+
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex space-x-3 items-center">
+          <Link
+            href="/demo"
+            className={`bg-[${PRIMARY_COLOR}] text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[${HOVER_COLOR}] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5`}
+          >
             Book a Demo
           </Link>
-          <Link href="/pricing" className="border border-[#8DC440] text-[#8DC440] px-4 py-2 rounded-full hover:bg-[#8DC440] hover:text-white transition-colors">
+
+          <Link
+            href="/pricing"
+            className={`border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-all duration-300`}
+          >
             Start Free Trial
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            />
           </svg>
         </button>
       </div>
-      {isOpen && (
-        <div className="md:hidden bg-white border-t">
-          <nav className="container mx-auto px-4 py-4 space-y-2">
-            <Link href="/" className={`block ${pathname === '/' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Home</Link>
-            <Link href="/modules" className={`block ${pathname === '/modules' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Modules</Link>
-            <Link href="/integrations" className={`block ${pathname === '/integrations' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Integrations</Link>
-            <Link href="/industries" className={`block ${pathname === '/industries' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Industries</Link>
-            <Link href="/pricing" className={`block ${pathname === '/pricing' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Pricing</Link>
-            <Link href="/about" className={`block ${pathname === '/about' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>About</Link>
-            <Link href="/resources" className={`block ${pathname === '/resources' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Resources</Link>
-            <Link href="/contact" className={`block ${pathname === '/contact' ? 'text-[#8DC440]' : 'text-black'} hover:text-[#8DC440] transition-colors`}>Contact</Link>
-            <Link href="/demo" className="block bg-[#8DC440] text-white px-4 py-2 rounded-full hover:bg-[#64AC6F] transition-colors text-center">Book a Demo</Link>
-            <Link href="/pricing" className="block border border-[#8DC440] text-[#8DC440] px-4 py-2 rounded-full hover:bg-[#8DC440] hover:text-white transition-colors text-center">Start Free Trial</Link>
+
+      {/* Mobile Menu Content with Smooth Transition */}
+      <div
+        ref={menuRef}
+        className="md:hidden overflow-hidden transition-all duration-500 ease-in-out"
+        style={{
+          // FIX 1 APPLIED: Safe access of scrollHeight with a generous fallback
+          maxHeight: isOpen
+            ? `${menuRef.current?.scrollHeight ?? 1000}px`
+            : "0",
+        }}
+      >
+        <div className="bg-white shadow-inner pt-2 pb-4">
+          <nav className="space-y-1 px-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={getNavLinkClasses(item.href, true)}
+                onClick={closeMenu}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
+
+          <div className="flex flex-col space-y-3 px-4 mt-4 border-t pt-4">
+            <Link
+              href="/demo"
+              className={`text-center bg-[${PRIMARY_COLOR}] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[${HOVER_COLOR}] transition-colors`}
+              onClick={closeMenu}
+            >
+              Book a Demo
+            </Link>
+            <Link
+              href="/pricing"
+              className={`text-center border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] font-semibold px-4 py-2 rounded-lg hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-colors`}
+              onClick={closeMenu}
+            >
+              Start Free Trial
+            </Link>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };
