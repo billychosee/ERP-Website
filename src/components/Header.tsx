@@ -70,14 +70,14 @@ const Header = () => {
         <div className="hidden md:flex space-x-3 items-center">
           <Link
             href="/demo"
-            className={`bg-[${PRIMARY_COLOR}] text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[${HOVER_COLOR}] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5`}
+            className={`bg-[${PRIMARY_COLOR}] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md hover:bg-[${HOVER_COLOR}] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5`}
           >
             Book a Demo
           </Link>
 
           <Link
             href="/pricing"
-            className={`border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-all duration-300`}
+            className={`border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-all duration-300`}
           >
             Start Free Trial
           </Link>
@@ -133,14 +133,14 @@ const Header = () => {
           <div className="flex flex-col space-y-3 px-4 mt-4 border-t pt-4">
             <Link
               href="/demo"
-              className={`text-center bg-[${PRIMARY_COLOR}] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[${HOVER_COLOR}] transition-colors`}
+              className={`text-center bg-[${PRIMARY_COLOR}] text-white font-semibold px-4 py-2 rounded-full hover:bg-[${HOVER_COLOR}] transition-colors`}
               onClick={closeMenu}
             >
               Book a Demo
             </Link>
             <Link
               href="/pricing"
-              className={`text-center border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] font-semibold px-4 py-2 rounded-lg hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-colors`}
+              className={`text-center border border-[${PRIMARY_COLOR}] text-[${PRIMARY_COLOR}] font-semibold px-4 py-2 rounded-full hover:bg-[${PRIMARY_COLOR}] hover:text-white transition-colors`}
               onClick={closeMenu}
             >
               Start Free Trial
