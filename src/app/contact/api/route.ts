@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const mailOptions = {
       from: process.env.SMTP_FROM || email,
-      to: process.env.CONTACT_EMAIL || 'billy@smatechgroup.com',
+      to: process.env.CONTACT_EMAIL || 'info@smatechgroup.com',
       subject: `Zerp Contact Form: ${subject} - ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Email sending error:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }
