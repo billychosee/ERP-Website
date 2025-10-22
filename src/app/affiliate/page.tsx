@@ -36,7 +36,7 @@ export default function Affiliate() {
     {
       title: "High Demand, Proven Product",
       description:
-        "ZERP365 is an end-to-end business management platform designed for African enterprises from finance and inventory to HR, CRM, and beyond.",
+        "ZERP263 is an end-to-end business management platform designed for African enterprises from finance and inventory to HR, CRM, and beyond.",
       icon: DollarSign,
       color: "border-blue-600",
     },
@@ -75,7 +75,7 @@ export default function Affiliate() {
       step: "02",
       title: "Share Your Link",
       description:
-        "Promote ZERP365 using your unique referral link — through your network, social media, or website.",
+        "Promote ZERP263 using your unique referral link — through your network, social media, or website.",
     },
     {
       step: "03",
@@ -157,7 +157,7 @@ export default function Affiliate() {
               </h2>
               <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
                 Empower businesses to go digital and get rewarded for it. Join
-                the ZERP365 Affiliate Program and earn competitive commissions
+                the ZERP263 Affiliate Program and earn competitive commissions
                 for every business you bring onboard to Africa&apos;s
                 fastest-growing business ERP.
               </p>
@@ -194,7 +194,7 @@ export default function Affiliate() {
               <div className="space-y-6 mb-8">
                 {/* Referrals */}
                 <div>
-                  <label className="block text-lg font-medium mb-3 text-white flex justify-between items-center">
+                  <label className="text-lg font-medium mb-3 text-white flex justify-between items-center">
                     <span>Monthly Referrals</span>
                     <span className="text-2xl font-bold text-[#8DC440]">
                       {calculatorData.referrals}
@@ -216,7 +216,7 @@ export default function Affiliate() {
                 </div>
                 {/* Conversion Rate */}
                 <div>
-                  <label className="block text-lg font-medium mb-3 text-white flex justify-between items-center">
+                  <label className="text-lg font-medium mb-3 text-white flex justify-between items-center">
                     <span>Conversion Rate (%)</span>
                     <span className="text-2xl font-bold text-[#8DC440]">
                       {calculatorData.conversionRate}%
@@ -238,7 +238,7 @@ export default function Affiliate() {
                 </div>
                 {/* Avg Deal Size */}
                 <div>
-                  <label className="block text-lg font-medium mb-3 text-white flex justify-between items-center">
+                  <label className="text-lg font-medium mb-3 text-white flex justify-between items-center">
                     <span>Avg Deal Size ($)</span>
                     <span className="text-2xl font-bold text-[#8DC440]">
                       ${calculatorData.avgDealSize}
@@ -331,9 +331,8 @@ export default function Affiliate() {
           <div className="lg:col-span-6 relative h-[450px] overflow-hidden rounded-xl shadow-2xl">
             <Image
               src="/african-business-collaboration.png"
-              alt="Successful ZERP365 Affiliates"
+              alt="Successful ZERP263 Affiliates"
               className="w-full h-full object-cover"
-              layout="fill"
               fill={true}
             />
           </div>
@@ -384,7 +383,7 @@ export default function Affiliate() {
                 Complete Marketing Toolkit
               </h3>
               <p className="text-lg text-gray-600 mb-8">
-                Get everything you need to successfully promote ZERP365 - from
+                Get everything you need to successfully promote ZERP263 - from
                 social media assets to email templates and demo videos.
               </p>
 
@@ -425,7 +424,7 @@ export default function Affiliate() {
               </h3>
               <p className="text-lg text-gray-600 mb-8">
                 Whether you&apos;re a consultant, marketer, or entrepreneur, if
-                you work with businesses, you can earn with ZERP365.
+                you work with businesses, you can earn with ZERP263.
               </p>
 
               <div className="flex flex-wrap gap-2">
