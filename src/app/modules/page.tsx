@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "ZERP365 Modules — Accounting, Sales, HR, Projects & More",
+  title: "ZERP263 Modules — Accounting, Sales, HR, Projects & More",
   description:
-    "Explore ZERP365 modules covering accounting, HR, inventory, sales, and more — all integrated and scalable.",
+    "Explore ZERP263 modules covering accounting, HR, inventory, sales, and more — all integrated and scalable.",
 };
 
 export default function Modules() {
@@ -48,7 +48,7 @@ export default function Modules() {
                 of your operations.
               </p>
               <p className="text-lg mb-8 max-w-3xl">
-                Every module in ZERP365 connects seamlessly — giving you
+                Every module in ZERP263 connects seamlessly — giving you
                 real-time visibility across teams, departments, and locations.
                 From accounting to HR, sales to inventory, we&apos;ve got you
                 covered.
@@ -64,7 +64,7 @@ export default function Modules() {
                 Need Our Services?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss how ZERP365 modules can transform your business
+                Let&apos;s discuss how ZERP263 modules can transform your business
                 operations.
               </p>
               <Link
@@ -634,7 +634,7 @@ export default function Modules() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Get started with ZERP365 today and see how our integrated modules
+            Get started with ZERP263 today and see how our integrated modules
             can streamline your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

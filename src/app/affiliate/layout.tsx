@@ -3,15 +3,15 @@
 
 export const metadata = {
   title:
-    "ZERP365 Affiliate Program — Earn Commissions for Digital Transformation",
+    "ZERP263 Affiliate Program — Earn Commissions for Digital Transformation",
   description:
-    "Join the ZERP365 Affiliate Program and earn competitive commissions for every business you bring onboard to Africa's fastest-growing business ERP.",
+    "Join the ZERP263 Affiliate Program and earn competitive commissions for every business you bring onboard to Africa's fastest-growing business ERP.",
   openGraph: {
-    title: "ZERP365 Affiliate Program — Earn Commissions",
+    title: "ZERP263 Affiliate Program — Earn Commissions",
     description:
-      "Join the ZERP365 Affiliate Program and earn competitive commissions for every business you bring onboard to Africa's fastest-growing business ERP.",
+      "Join the ZERP263 Affiliate Program and earn competitive commissions for every business you bring onboard to Africa's fastest-growing business ERP.",
     url: "https://yourwebsite.com/affiliate",
-    siteName: "ZERP365",
+    siteName: "ZERP263",
     images: [
       {
         url: "/hero_about_zerp365_black_team.png",

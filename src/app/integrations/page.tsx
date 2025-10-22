@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ZERP365 Integrations — Payment, Tax, and Custom APIs',
-  description: 'ZERP365 integrates with your existing tools — payment gateways, ZIMRA tax APIs, WhatsApp notifications, and POS systems.',
+  title: 'ZERP263 Integrations — Payment, Tax, and Custom APIs',
+  description: 'ZERP263 integrates with your existing tools — payment gateways, ZIMRA tax APIs, WhatsApp notifications, and POS systems.',
 };
 
 export default function Integrations() {
@@ -42,7 +42,7 @@ export default function Integrations() {
                 Limits.
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
-                Connect ZERP365 with your ecosystem — payment platforms,
+                Connect ZERP263 with your ecosystem — payment platforms,
                 government tax systems, communication tools, analytics
                 dashboards and more.
               </p>
@@ -57,7 +57,7 @@ export default function Integrations() {
                 Need Custom Integration?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss how ZERP365 integrations can connect your
+                Let&apos;s discuss how ZERP263 integrations can connect your
                 systems seamlessly.
               </p>
               <Link
@@ -83,7 +83,7 @@ export default function Integrations() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Connect ZERP365 with your existing tools and systems for a unified business experience
+              Connect ZERP263 with your existing tools and systems for a unified business experience
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export default function Integrations() {
                     REST API
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    Full REST API access to all ZERP365 data and functions
+                    Full REST API access to all ZERP263 data and functions
                   </p>
                 </div>
               </div>

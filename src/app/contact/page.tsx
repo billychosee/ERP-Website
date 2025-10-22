@@ -120,7 +120,7 @@ export default function Contact() {
                 today.
               </p>
               <p className="text-lg mb-8 max-w-2xl text-gray-400">
-                Have questions about ZERP365? Need a tailored demo? We&apos;re
+                Have questions about ZERP263? Need a tailored demo? We&apos;re
                 here to help you unlock the full potential of our platform for
                 your African business.
               </p>
@@ -135,7 +135,7 @@ export default function Contact() {
                 Let&apos;s Talk Growth 🚀
               </h2>
               <p className="text-lg mb-8 text-gray-300">
-                Discuss your business challenges and see how ZERP365 can provide
+                Discuss your business challenges and see how ZERP263 can provide
                 African-centric solutions.
               </p>
               <a

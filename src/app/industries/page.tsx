@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Tailored for your Industry',
-  description: 'Retail, Manufacturing, Services, Construction, Finance, Agriculture, Education, NGOs — ZERP365 adapts to your workflows, not the other way around.',
+  description: 'Retail, Manufacturing, Services, Construction, Finance, Agriculture, Education, NGOs — ZERP263 adapts to your workflows, not the other way around.',
 };
 
 export default function Industries() {
@@ -165,7 +165,7 @@ export default function Industries() {
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
                 Retail, Manufacturing, Services, Construction, Finance,
-                Agriculture, Education, NGOs — ZERP365 adapts to your workflows,
+                Agriculture, Education, NGOs — ZERP263 adapts to your workflows,
                 not the other way around.
               </p>
             </div>
@@ -179,7 +179,7 @@ export default function Industries() {
                 Industry-Specific Solutions?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss how ZERP365 can be tailored to your
+                Let&apos;s discuss how ZERP263 can be tailored to your
                 industry&apos;s unique requirements.
               </p>
               <Link
@@ -205,7 +205,7 @@ export default function Industries() {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              ZERP365 adapts to your industry&apos;s unique workflows and
+              ZERP263 adapts to your industry&apos;s unique workflows and
               requirements, providing tailored solutions for every sector
             </p>
           </div>

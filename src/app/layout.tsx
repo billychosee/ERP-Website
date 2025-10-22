@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZERP365 — All-in-One Business Management Software for every industry",
+  title: "ZERP263 — All-in-One Business Management Software for every industry",
   description:
-    "ZERP365 brings every part of your business together — accounting, sales, HR, projects, and inventory — in one powerful platform built for growth, tailored to retail, manufacturing, services, NGOs, and more.",
+    "ZERP263 brings every part of your business together — accounting, sales, HR, projects, and inventory — in one powerful platform built for growth, tailored to retail, manufacturing, services, NGOs, and more.",
 };
 
 export default function RootLayout({

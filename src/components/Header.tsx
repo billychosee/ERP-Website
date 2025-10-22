@@ -50,7 +50,7 @@ const Header = () => {
           className={`text-2xl font-extrabold tracking-tight text-[${PRIMARY_COLOR}]`}
           onClick={closeMenu}
         >
-          ZERP365
+          ZERP263
         </Link>
 
         {/* Desktop Navigation */}

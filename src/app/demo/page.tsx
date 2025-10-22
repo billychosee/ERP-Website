@@ -63,10 +63,10 @@ export default function Demo() {
             {/* Left Section - About Demo */}
             <div className="animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-[#8DC440]">Experience</span> ZERP365 in Action
+                <span className="text-[#8DC440]">Experience</span> ZERP263 in Action
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
-                Schedule your live demo and see how ZERP365 transforms your business operations in real time.
+                Schedule your live demo and see how ZERP263 transforms your business operations in real time.
               </p>
               <p className="text-lg mb-8 max-w-2xl">
                 Get a personalized walkthrough of our platform, tailored to your industry and business needs.
@@ -253,7 +253,7 @@ export default function Demo() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">Live Interactive Demo</h3>
-                      <p className="text-gray-600">See ZERP365 in action with your real data and scenarios</p>
+                      <p className="text-gray-600">See ZERP263 in action with your real data and scenarios</p>
                     </div>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ export default function Demo() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="group-hover:text-gray-900 transition-colors duration-300">See how ZERP365 solves your specific challenges</span>
+                    <span className="group-hover:text-gray-900 transition-colors duration-300">See how ZERP263 solves your specific challenges</span>
                   </li>
                   <li className="flex items-start group">
                     <div className="flex-shrink-0 w-6 h-6 bg-[#8DC440] rounded-full flex items-center justify-center mr-4 mt-0.5 group-hover:scale-110 transition-transform duration-300">

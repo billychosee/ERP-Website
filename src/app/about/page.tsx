@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About ZERP365 — The Future of Business Management',
-  description: 'ZERP365 is a next-generation business management system that unifies operations, finance, and teams under one platform.',
+  title: 'About ZERP263 — The Future of Business Management',
+  description: 'ZERP263 is a next-generation business management system that unifies operations, finance, and teams under one platform.',
 };
 
 export default function About() {
@@ -34,19 +34,19 @@ export default function About() {
 
         <div className="relative container mx-auto px-4 text-white z-10">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Section - About ZERP365 */}
+            {/* Left Section - About ZERP263 */}
             <div className="animate-fade-in-up">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="text-[#8DC440]">About</span> ZERP365
+                <span className="text-[#8DC440]">About</span> ZERP263
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
-                ZERP365 was built to solve one problem — scattered systems that
+                ZERP263 was built to solve one problem — scattered systems that
                 slow down business. Our platform unites accounting, HR, sales,
                 and operations in a single, intelligent workspace.
               </p>
               <p className="text-lg mb-8 max-w-2xl">
                 Designed with scalability, compliance, and real-time insight at
-                its core, ZERP365 gives businesses full control and clarity.
+                its core, ZERP263 gives businesses full control and clarity.
               </p>
               {/* <p className="text-lg">
                 A product of Smatech Group, a leader in enterprise technology
@@ -63,7 +63,7 @@ export default function About() {
                 Learn More About Us?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss how ZERP365 can transform your business
+                Let&apos;s discuss how ZERP263 can transform your business
                 operations and help you achieve your goals.
               </p>
               <Link
@@ -89,7 +89,7 @@ export default function About() {
               Our Journey
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-              The ZERP365 <span className="text-[#64AC6F]">Story</span>
+              The ZERP263 <span className="text-[#64AC6F]">Story</span>
             </h2>
             <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
               From identifying a critical need to building Africa&apos;s most
@@ -179,7 +179,7 @@ export default function About() {
                         The Solution
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
-                        ZERP365 was born from this frustration. Our founders,
+                        ZERP263 was born from this frustration. Our founders,
                         experienced entrepreneurs and technology leaders,
                         recognized that businesses needed a modern solution that
                         could adapt to their unique workflows rather than
@@ -220,7 +220,7 @@ export default function About() {
                         African Focus
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Built specifically for African businesses, ZERP365
+                        Built specifically for African businesses, ZERP263
                         understands local market dynamics, regulatory
                         requirements, and the unique challenges of operating in
                         diverse industries. From retail stores in urban centers
@@ -270,7 +270,7 @@ export default function About() {
                         Today & Beyond
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Today, ZERP365 serves thousands of businesses across
+                        Today, ZERP263 serves thousands of businesses across
                         Africa, helping them streamline operations, improve
                         decision-making, and accelerate growth. We&apos;re not
                         just software — we&apos;re your growth partner,
@@ -290,7 +290,7 @@ export default function About() {
       </section>
 
       {/* -------------------------------------------------
-        3. WHY ZERP365 (Enhanced with Interactive Cards)
+        3. WHY ZERP263 (Enhanced with Interactive Cards)
         -------------------------------------------------
       */}
       <section className="py-24 bg-gray-50">
@@ -300,7 +300,7 @@ export default function About() {
               Why Choose Us
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-              What Makes ZERP365{" "}
+              What Makes ZERP263{" "}
               <span className="text-[#64AC6F]">Different</span>
             </h2>
             <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
@@ -556,10 +556,10 @@ export default function About() {
                 <span className="text-white font-semibold">Ready to Transform Your Business?</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Experience ZERP365 <span className="text-[#8DC440]">Today</span>
+                Experience ZERP263 <span className="text-[#8DC440]">Today</span>
               </h2>
               <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of African businesses already using ZERP365 to streamline operations,
+                Join thousands of African businesses already using ZERP263 to streamline operations,
                 boost productivity, and accelerate growth.
               </p>
             </div>

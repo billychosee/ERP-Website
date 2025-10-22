@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
             <p style="white-space: pre-wrap;">${message}</p>
           </div>
           <p style="color: #666; font-size: 12px;">
-            This message was sent from the ZERP365 contact form.
+            This message was sent from the ZERP263 contact form.
           </p>
         </div>
       `,
@@ -86,15 +86,15 @@ export async function POST(request: NextRequest) {
       const confirmationMailOptions = {
         from: process.env.SMTP_FROM || process.env.SMTP_USER,
         to: email,
-        subject: "Thank you for contacting ZERP365",
+        subject: "Thank you for contacting ZERP263",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #8DC440;">Thank you for contacting ZERP365</h2>
+            <h2 style="color: #8DC440;">Thank you for contacting ZERP263</h2>
             <p>Dear ${firstName} ${lastName},</p>
             <p>Thank you for reaching out to us. We have received your message and will get back to you within 24 hours.</p>
             <p><strong>Your message:</strong></p>
             <p style="background: #f9f9f9; padding: 15px; border-radius: 8px; white-space: pre-wrap;">${message}</p>
-            <p>Best regards,<br>The ZERP365 Team</p>
+            <p>Best regards,<br>The ZERP263 Team</p>
           </div>
         `,
       };

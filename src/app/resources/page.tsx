@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ZERP365 Resources — Business Growth & Automation Insights',
+  title: 'ZERP263 Resources — Business Growth & Automation Insights',
   description: 'Discover insights on ERP, automation, compliance, and business growth strategies for SMEs and enterprises.',
 };
 
@@ -93,7 +93,7 @@ export default function Resources() {
                 Need Expert Guidance?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss how ZERP365 can help optimize your business
+                Let&apos;s discuss how ZERP263 can help optimize your business
                 processes and drive growth.
               </p>
               <Link

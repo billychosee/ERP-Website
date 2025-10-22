@@ -8,36 +8,36 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Is ZERP365 cloud-based or on-premise?",
-      answer: "ZERP365 is a cloud-based ERP solution, accessible from anywhere with an internet connection. We also offer hybrid deployment options for organizations with specific security or compliance requirements."
+      question: "Is ZERP263 cloud-based or on-premise?",
+      answer: "ZERP263 is a cloud-based ERP solution, accessible from anywhere with an internet connection. We also offer hybrid deployment options for organizations with specific security or compliance requirements."
     },
     {
-      question: "Can I integrate ZERP365 with my existing accounting software?",
-      answer: "Yes, ZERP365 offers extensive integration capabilities. We support integration with popular accounting software, payment gateways, POS systems, and custom APIs. Our integration team can help you connect with virtually any system."
+      question: "Can I integrate ZERP263 with my existing accounting software?",
+      answer: "Yes, ZERP263 offers extensive integration capabilities. We support integration with popular accounting software, payment gateways, POS systems, and custom APIs. Our integration team can help you connect with virtually any system."
     },
     {
       question: "How secure is our business data?",
-      answer: "Security is our top priority. ZERP365 uses enterprise-grade encryption, regular security audits, and complies with international data protection standards. We implement role-based access control, regular backups, and secure data centers."
+      answer: "Security is our top priority. ZERP263 uses enterprise-grade encryption, regular security audits, and complies with international data protection standards. We implement role-based access control, regular backups, and secure data centers."
     },
     {
       question: "Do you offer training and implementation support?",
       answer: "Absolutely. We provide comprehensive implementation support including data migration, system configuration, user training, and ongoing support. Our implementation specialists work closely with your team to ensure a smooth transition."
     },
     {
-      question: "Can ZERP365 work offline?",
-      answer: "While ZERP365 is primarily a cloud-based solution, we offer limited offline capabilities for critical functions. However, full synchronization requires an internet connection for optimal performance and data integrity."
+      question: "Can ZERP263 work offline?",
+      answer: "While ZERP263 is primarily a cloud-based solution, we offer limited offline capabilities for critical functions. However, full synchronization requires an internet connection for optimal performance and data integrity."
     },
     {
-      question: "What industries is ZERP365 best suited for?",
-      answer: "ZERP365 is designed to adapt to any industry. We have specific configurations and features optimized for retail, manufacturing, services, construction, finance, agriculture, education, NGOs, and many more sectors."
+      question: "What industries is ZERP263 best suited for?",
+      answer: "ZERP263 is designed to adapt to any industry. We have specific configurations and features optimized for retail, manufacturing, services, construction, finance, agriculture, education, NGOs, and many more sectors."
     },
     {
       question: "How does pricing work?",
       answer: "We offer flexible pricing with a free tier for getting started, a $5/month starter plan, and custom enterprise pricing. All plans include core features with additional modules available as add-ons."
     },
     {
-      question: "Can I customize ZERP365 for my specific business needs?",
-      answer: "Yes, ZERP365 is highly customizable. You can configure workflows, dashboards, reports, and processes to match your business requirements. For advanced customizations, our development team can assist."
+      question: "Can I customize ZERP263 for my specific business needs?",
+      answer: "Yes, ZERP263 is highly customizable. You can configure workflows, dashboards, reports, and processes to match your business requirements. For advanced customizations, our development team can assist."
     },
     {
       question: "What kind of support do you provide?",
@@ -91,7 +91,7 @@ export default function FAQ() {
                 Questions
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
-                Find answers to common questions about ZERP365.
+                Find answers to common questions about ZERP263.
               </p>
               <p className="text-lg mb-8 max-w-2xl">
                 Can&apos;t find what you&apos;re looking for? Our support team
@@ -133,7 +133,7 @@ export default function FAQ() {
               Common Questions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to know about ZERP365
+              Everything you need to know about ZERP263
             </p>
           </div>
 

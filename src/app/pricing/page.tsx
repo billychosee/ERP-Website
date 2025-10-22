@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ZERP365 Pricing — Simple, Scalable, Transparent',
-  description: 'Choose a ZERP365 plan that fits your business — flexible pricing for startups, SMEs, and enterprises.',
+  title: 'ZERP263 Pricing — Simple, Scalable, Transparent',
+  description: 'Choose a ZERP263 plan that fits your business — flexible pricing for startups, SMEs, and enterprises.',
 };
 
 export default function Pricing() {
@@ -40,7 +40,7 @@ export default function Pricing() {
                 <span className="text-[#8DC440]">Simple</span> Pricing. Scales as You Grow.
               </h1>
               <p className="text-xl mb-4 max-w-3xl">
-                Choose a ZERP365 plan that fits your business — flexible pricing
+                Choose a ZERP263 plan that fits your business — flexible pricing
                 for startups, SMEs, and enterprises.
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function Pricing() {
                 Need Pricing Help?
               </h2>
               <p className="text-lg mb-8">
-                Let&apos;s discuss which ZERP365 plan best fits your business
+                Let&apos;s discuss which ZERP263 plan best fits your business
                 needs and budget.
               </p>
               <Link
@@ -82,7 +82,7 @@ export default function Pricing() {
                 <div className="text-4xl font-bold text-gray-900 mb-2">$0</div>
                 <p className="text-gray-600 mb-6">/month</p>
                 <p className="text-gray-600 mb-6">
-                  Perfect for trying out ZERP365
+                  Perfect for trying out ZERP263
                 </p>
                 <ul className="text-left space-y-3 mb-8">
                   <li className="flex items-center">

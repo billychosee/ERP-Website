@@ -54,7 +54,7 @@ export default function Home() {
       step: "01",
       title: "Discovery & Fit",
       description:
-        "Analyze your current processes and define the required ZERP365 configuration.",
+        "Analyze your current processes and define the required ZERP263 configuration.",
     },
     {
       step: "02",
@@ -136,7 +136,7 @@ export default function Home() {
               on One Platform
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-4xl mx-auto animate-slide-in-right">
-              ZERP365 is a single, powerful platform built specifically to
+              ZERP263 is a single, powerful platform built specifically to
               handle African compliance (ZIMRA, fiscalization, multi-currency),
               uniting Finance, Operations, HR, and CRM.
             </p>
@@ -218,7 +218,7 @@ const erpStats = [
             {/* Replaced Placeholder with Image */}
             <Image
               src="/african-business-collaboration.png"
-              alt="ZERP365 Dashboard showing African business collaboration and data"
+              alt="ZERP263 Dashboard showing African business collaboration and data"
               className="w-full h-full object-cover"
               layout="fill"
               fill={true}
@@ -228,14 +228,14 @@ const erpStats = [
           {/* Left Side: Text & Stats */}
           <div className="lg:col-span-6">
             <p className="text-[#8DC440] font-semibold mb-2 uppercase text-sm tracking-widest">
-              The ZERP365 Advantage
+              The ZERP263 Advantage
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
               Built for African Business Realities
             </h2>
             <p className="text-lg text-gray-300 mb-10">
               Forget expensive integrations and non-compliant global software.
-              ZERP365 is designed locally to handle complexities like
+              ZERP263 is designed locally to handle complexities like
               multi-currency, ZIMRA regulations, and unique regional supply
               chains, right out of the box.
             </p>
