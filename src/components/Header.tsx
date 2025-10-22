@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 
@@ -47,10 +48,16 @@ const Header = () => {
         {/* Logo */}
         <Link
           href="/"
-          className={`text-2xl font-extrabold tracking-tight text-[${PRIMARY_COLOR}]`}
+          className="flex items-center space-x-2"
           onClick={closeMenu}
         >
-          ZERP263
+          <Image
+            src="/zerp263-logo.png"
+            alt="ZERP263 Logo"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

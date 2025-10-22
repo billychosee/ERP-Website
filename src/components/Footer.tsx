@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaXTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
 const Footer = () => {
@@ -7,7 +8,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">ZERP263</h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <Image
+                src="/zerp263-logo.png"
+                alt="ZERP263 Logo"
+                width={32}
+                height={32}
+                className="h-8 w-auto"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               All-in-One Business Management Software for every industry.
             </p>
