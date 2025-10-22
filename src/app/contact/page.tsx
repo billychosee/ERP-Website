@@ -13,6 +13,12 @@ export default function Contact() {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -24,22 +30,52 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Contact form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
 
-    // Optionally reset form data after submission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      company: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      const response = await fetch('/contact/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you for your message! We\'ll get back to you soon.',
+        });
+        // Reset form data after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to send message. Please try again.',
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Define a reusable input class string
@@ -288,12 +324,26 @@ export default function Contact() {
                     />
                   </div>
 
+                  {/* Status Message */}
+                  {submitStatus.type && (
+                    <div
+                      className={`p-4 rounded-lg ${
+                        submitStatus.type === 'success'
+                          ? 'bg-green-50 border border-green-200 text-green-800'
+                          : 'bg-red-50 border border-red-200 text-red-800'
+                      }`}
+                    >
+                      {submitStatus.message}
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#8DC440] text-white px-8 py-4 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-bold shadow-lg hover:shadow-xl hover:shadow-[#8DC440]/50 transform hover:scale-[1.01]"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#8DC440] text-white px-8 py-4 rounded-full hover:bg-[#64AC6F] transition-all duration-300 text-lg font-bold shadow-lg hover:shadow-xl hover:shadow-[#8DC440]/50 transform hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    Submit Request
+                    {isSubmitting ? 'Sending...' : 'Submit Request'}
                   </button>
                 </form>
               </div>
