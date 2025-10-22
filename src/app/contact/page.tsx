@@ -89,7 +89,7 @@ export default function Contact() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
           style={{
-            backgroundImage: "url(/hero_about_zerp365_black_team.png)",
+            backgroundImage: "url(/hero_about_zerp263_black_team.png)",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-black/40 to-black/30"></div>
@@ -392,7 +392,7 @@ export default function Contact() {
                         href="mailto:support@zerp365.com"
                         className="text-[#8DC440] font-semibold hover:text-[#64AC6F] transition-colors"
                       >
-                        support@zerp365.com
+                        support@zerp263.com
                       </a>
                     </div>
                   </div>
@@ -499,11 +499,13 @@ export default function Contact() {
                       </h3>
                       <p className="text-gray-600">
                         Monday - Friday:{" "}
-                        <span className="font-semibold">8:00 AM - 6:00 PM</span>
+                        <span className="font-semibold">7:30 AM - 4:30 PM</span>
                       </p>
                       <p className="text-gray-600">
                         Saturday:{" "}
-                        <span className="font-semibold">9:00 AM - 2:00 PM</span>
+                        <span className="font-semibold text-red-500">
+                          Closed
+                        </span>
                       </p>
                       <p className="text-gray-600">
                         Sunday:{" "}
