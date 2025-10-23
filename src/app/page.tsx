@@ -128,6 +128,17 @@ export default function Home() {
         {/* Content Overlay */}
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <div className="max-w-5xl mx-auto">
+            {/* ZERP263 Logo */}
+            <div className="mb-6">
+              <Image
+                src="/zerp263-logo.png"
+                alt="ZERP263 Logo"
+                width={120}
+                height={120}
+                className="mx-auto"
+                quality={100}
+              />
+            </div>
             <p className="text-[#8DC440] text-base font-medium uppercase tracking-widest mb-3 animate-fade-in-up">
               The Unified Business Platform
             </p>

@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "ZERP263 — All-in-One Business Management Software for every industry",
   description:
     "ZERP263 brings every part of your business together — accounting, sales, HR, projects, and inventory — in one powerful platform built for growth, tailored to retail, manufacturing, services, NGOs, and more.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

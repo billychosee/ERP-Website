@@ -54,8 +54,8 @@ const Header = () => {
           <Image
             src="/zerp263-logo.png"
             alt="ZERP263 Logo"
-            width={32}
-            height={32}
+            width={300}
+            height={300}
             className="h-8 w-auto"
           />
         </Link>

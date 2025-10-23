@@ -8,9 +8,6 @@ import {
   Settings,
   LayoutGrid,
   ArrowRight,
-  Database,
-  Factory,
-  UserCheck,
 } from "lucide-react";
 
 export default function Affiliate() {
@@ -85,34 +82,6 @@ export default function Affiliate() {
     },
   ];
 
-  // --- Utility Component for Benefit Cards ---
-  const BenefitCard = ({
-    title,
-    description,
-    icon: Icon,
-    color,
-  }: {
-    title: string;
-    description: string;
-    icon: React.ComponentType<{ className?: string }>;
-    color: string;
-  }) => (
-    <div
-      className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-t-4 ${color}`}
-    >
-      <div className="mb-6">
-        <Icon className={`w-10 h-10 text-gray-900`} />
-      </div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <Link
-        href="#signup"
-        className="text-[#8DC440] font-medium flex items-center hover:text-[#64AC6F] transition-colors"
-      >
-        Learn More <ArrowRight className="w-4 h-4 ml-2" />
-      </Link>
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
@@ -275,10 +244,10 @@ export default function Affiliate() {
       </section>
 
       {/* -------------------------------------------------
-        2. AFFILIATE BENEFITS (Unique Content)
+        2. AFFILIATE BENEFITS (Unique Content - Different Layout)
         -------------------------------------------------
       */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#8DC440] font-semibold mb-2 uppercase text-sm tracking-widest">
@@ -293,30 +262,54 @@ export default function Affiliate() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {affiliateBenefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <BenefitCard
-                  title={benefit.title}
-                  description={benefit.description}
-                  icon={benefit.icon}
-                  color={benefit.color}
-                />
-              </div>
-            ))}
+          {/* Different Layout: Horizontal Cards */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {affiliateBenefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-[#8DC440] hover:border-[#64AC6F]"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div
+                      className={`p-3 rounded-xl bg-gradient-to-br ${benefit.color
+                        ?.replace("border-", "from-")
+                        .replace("-600", "-100 to-")
+                        .replace(
+                          "-600",
+                          "-200"
+                        )} group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <benefit.icon className="w-8 h-8 text-gray-900" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#8DC440] transition-colors duration-300">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                      <Link
+                        href="#signup"
+                        className="inline-flex items-center text-[#8DC440] font-medium hover:text-[#64AC6F] transition-colors group-hover:translate-x-1 transform duration-300"
+                      >
+                        Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="text-center mt-12">
-            <Link
-              href="#signup"
-              className="text-[#8DC440] font-semibold flex items-center justify-center hover:text-[#64AC6F] transition-colors"
-            >
-              Start Your Affiliate Journey{" "}
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+
+          <div className="text-center mt-16">
+            <div className="inline-flex items-center space-x-4 bg-[#8DC440] text-white px-8 py-4 rounded-full hover:bg-[#64AC6F] transition-colors cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105">
+              <span className="font-semibold">
+                Start Your Affiliate Journey
+              </span>
+              <ArrowRight className="w-5 h-5" />
+            </div>
           </div>
         </div>
       </section>
@@ -370,89 +363,97 @@ export default function Affiliate() {
       </section>
 
       {/* -------------------------------------------------
-        4. MARKETING SUPPORT & WHO CAN JOIN (Unique Content)
+        4. AFFILIATE TESTIMONIALS & SUCCESS STORIES (Different from Home)
         -------------------------------------------------
       */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Marketing Support Column */}
-            <div>
-              <Database className="w-10 h-10 text-[#8DC440] mb-4" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Complete Marketing Toolkit
-              </h3>
-              <p className="text-lg text-gray-600 mb-8">
-                Get everything you need to successfully promote ZERP263 - from
-                social media assets to email templates and demo videos.
-              </p>
+          <div className="text-center mb-16">
+            <p className="text-[#8DC440] font-semibold mb-2 uppercase text-sm tracking-widest">
+              Success Stories
+            </p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+              Real Affiliates, Real Earnings
+            </h2>
+            <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
+              Hear from successful affiliates who are building their income
+              while helping businesses transform
+            </p>
+          </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "Social Media Kits",
-                  "Email Templates",
-                  "Demo Videos",
-                  "Banner Ads",
-                  "Blog Content",
-                  "Case Studies",
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-2 bg-white p-3 rounded-lg shadow-sm border border-gray-100"
-                  >
-                    <UserCheck className="w-4 h-4 text-[#8DC440]" />
-                    <span className="text-sm font-medium text-gray-700">
-                      {item}
-                    </span>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-[#8DC440] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  J
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-900">James Ndlovu</h4>
+                  <p className="text-gray-600 text-sm">
+                    Business Consultant, Johannesburg
+                  </p>
+                </div>
               </div>
-              <Link
-                href="#resources"
-                className="text-[#8DC440] font-semibold flex items-center mt-6 hover:text-[#64AC6F] transition-colors"
-              >
-                Access Marketing Resources{" "}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+              <p className="text-gray-700 mb-6 italic">
+                &quot;I&apos;ve earned over $12,000 in commissions this year
+                alone. ZERP263&apos;s platform is exactly what African
+                businesses need, and the affiliate program makes it easy to
+                share this solution.&quot;
+              </p>
+              <div className="flex text-[#8DC440]">{"★".repeat(5)}</div>
             </div>
 
-            {/* Who Can Join Column */}
-            <div>
-              <Factory className="w-10 h-10 text-[#8DC440] mb-4" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Perfect For These Professionals
-              </h3>
-              <p className="text-lg text-gray-600 mb-8">
-                Whether you&apos;re a consultant, marketer, or entrepreneur, if
-                you work with businesses, you can earn with ZERP263.
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Business Consultants",
-                  "IT Professionals",
-                  "Marketing Agencies",
-                  "Accountants",
-                  "Entrepreneurs",
-                  "Industry Experts",
-                  "Digital Marketers",
-                  "Sales Professionals",
-                ].map((role, index) => (
-                  <span
-                    key={index}
-                    className="bg-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full font-medium hover:bg-blue-100 transition-colors"
-                  >
-                    {role}
-                  </span>
-                ))}
+            {/* Testimonial 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-[#64AC6F] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  A
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-900">Amara Okafor</h4>
+                  <p className="text-gray-600 text-sm">
+                    Digital Marketing Agency, Lagos
+                  </p>
+                </div>
               </div>
-              <Link
-                href="#signup"
-                className="text-[#8DC440] font-semibold flex items-center mt-6 hover:text-[#64AC6F] transition-colors"
-              >
-                Apply to Join Today <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+              <p className="text-gray-700 mb-6 italic">
+                &quot;The marketing toolkit provided is incredible. I&apos;ve
+                converted 45 clients in 6 months, earning $8,500 in commissions.
+                The support team is always there when needed.&quot;
+              </p>
+              <div className="flex text-[#8DC440]">{"★".repeat(5)}</div>
             </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-[#20356A] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  K
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-900">Kofi Mensah</h4>
+                  <p className="text-gray-600 text-sm">
+                    IT Solutions Provider, Accra
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                &quot;Started with just 5 referrals and now have 23 active
+                clients. The 15% commission rate and monthly payouts have become
+                a significant part of my business income.&quot;
+              </p>
+              <div className="flex text-[#8DC440]">{"★".repeat(5)}</div>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Link
+              href="#signup"
+              className="inline-flex items-center bg-[#8DC440] text-white px-8 py-4 rounded-full hover:bg-[#64AC6F] transition-colors font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Join These Success Stories <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </section>

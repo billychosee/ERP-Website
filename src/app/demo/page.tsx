@@ -39,7 +39,7 @@ export default function Demo() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(/hero_about_zerp365_black_team.png)",
+            backgroundImage: "url(/hero_live_demo_black_team.png)",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
@@ -123,7 +123,7 @@ export default function Demo() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
                   </div>
@@ -139,7 +139,7 @@ export default function Demo() {
                       required
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
                   </div>
@@ -156,7 +156,7 @@ export default function Demo() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -172,7 +172,7 @@ export default function Demo() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+263 XX XXX XXXX"
                   />
                 </div>
@@ -188,7 +188,7 @@ export default function Demo() {
                       name="preferredDate"
                       value={formData.preferredDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
 
@@ -201,7 +201,7 @@ export default function Demo() {
                       name="preferredTime"
                       value={formData.preferredTime}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select time</option>
                       <option value="09:00">9:00 AM</option>
@@ -224,7 +224,7 @@ export default function Demo() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-700 bg-white text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Briefly describe your business, current challenges, and what you'd like to see in the demo..."
                   />
                 </div>

@@ -266,16 +266,16 @@ export default function Industries() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div
-                    className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${colorScheme.bg} to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-700 rotate-12 group-hover:rotate-0`}
+                    className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${colorScheme.bg} to-transparent rounded-bl-full opacity-100 transition-all duration-700 rotate-12 group-hover:rotate-0`}
                   ></div>
-                  <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-br from-[#8DC440]/30 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+                  <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-br from-[#8DC440]/30 to-transparent rounded-full opacity-100 transition-opacity duration-500 delay-200"></div>
 
                   <div className="relative p-8">
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-6xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                         {industry.icon}
                       </div>
-                      <div className="w-3 h-3 bg-[#8DC440] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300"></div>
+                      <div className="w-3 h-3 bg-[#8DC440] rounded-full opacity-100 transition-opacity duration-300 delay-300"></div>
                     </div>
 
                     <h3
@@ -296,7 +296,7 @@ export default function Industries() {
                             key={subIndex}
                             className="flex items-center text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300"
                           >
-                            <div className="w-1.5 h-1.5 bg-[#8DC440] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200"></div>
+                            <div className="w-1.5 h-1.5 bg-[#8DC440] rounded-full mr-2 opacity-100 transition-opacity duration-300 delay-200"></div>
                             {sub}
                           </div>
                         ))}
@@ -320,24 +320,6 @@ export default function Industries() {
                       )}
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-500">
-                      <div className="flex items-center text-[#8DC440] font-medium">
-                        <span className="text-sm">Explore solutions</span>
-                        <svg
-                          className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                   </div>
                 </div>
               );
